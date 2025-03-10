@@ -6,7 +6,7 @@ public class Lab011_Common_Math {
         System.out.println(2*2);
         System.out.println(2/2);
         System.out.println(2-2);
-        System.out.println(3/2);
+        System.out.println(3/2); // println will always return integer part > No Decimal
         System.out.println(10/0); // "ArithmeticException: / by Zero"
 
     }
