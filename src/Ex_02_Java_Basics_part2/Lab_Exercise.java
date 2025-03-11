@@ -3,7 +3,7 @@ package Ex_02_Java_Basics_part2;
 public class Lab_Exercise {
     public static void main(String[] args) {
         int a = 10;
-        int a_1 = a * 1;
+        // int a_1 = a * 1; -- Not required as its same
         int a_2 = a * 2;
         int a_3 = a * 3;
         int a_4 = a * 4;
@@ -16,7 +16,7 @@ public class Lab_Exercise {
 
 
 
-        System.out.printf("%d * 1 = %d %n", a,a_1);
+        System.out.printf("%d * 1 = %d %n", a,a);
         System.out.printf("%d * 2 = %d %n", a,a_2);
         System.out.printf("%d * 3 = %d %n", a,a_3);
         System.out.printf("%d * 4 = %d %n", a,a_4);
