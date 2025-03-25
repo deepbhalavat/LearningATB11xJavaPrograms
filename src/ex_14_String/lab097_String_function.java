@@ -43,6 +43,18 @@ public class lab097_String_function {
         System.out.println(s113.indexOf("d"));
         System.out.println(s113.lastIndexOf("a"));
 
+        StringBuffer stringBuffer = new StringBuffer("Deep");
+        stringBuffer.append("Bhalavat");
+        System.out.println(stringBuffer);
+        System.out.println(stringBuffer.reverse());
+
+        // only one string will be in OA -- as its mutable. so deep will be removed and add DeepBhalavat
+
+        StringBuilder sb = new StringBuilder("Hello");
+        sb.append(" World");
+        System.out.println(sb.reverse());
+        sb.delete(3,5);
+        System.out.println(sb);
 
 
 
