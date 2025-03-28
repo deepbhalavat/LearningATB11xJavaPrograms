@@ -5,7 +5,5 @@ public class lab_101_String_CLI {
         for(int j = 0; j < args.length ; j++){
             System.out.println(args[j]);
         }
-
     }
-
 }
