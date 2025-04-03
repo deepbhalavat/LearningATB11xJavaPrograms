@@ -10,8 +10,15 @@ public class lab_119_real_Ex_method_overriding {
         Firefox f1 = new Firefox();
         f1.openBrowser();
 
-        CommonToAll d1 = new CommonToAll();
-      //  d1.openBrowser();
+        commontoAll cm1 = new commontoAll();
+        cm1.openBrowser();
+
+        //Dynamic Dispach
+        commontoAll c2 = new chrome();
+        c2.openBrowser();
+
+        commontoAll c3 = new Firefox();
+        c3.openBrowser();
 
 
 
