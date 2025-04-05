@@ -1,0 +1,167 @@
+Q1. What is Java?
+➡️ Java is a high-level, object-oriented, platform-independent programming language developed by Sun Microsystems (now owned by Oracle).
+It is designed to have fewer implementation dependencies, which makes it portable, secure, and robust.
+•	Java is used for building web applications, mobile apps, desktop software, enterprise solutions, and more.
+•	It follows Write Once, Run Anywhere (WORA) philosophy — code written in Java can run on any platform that supports Java without modification.
+________________________________________
+Q2. What are the features of Java?
+Here’s a handy list:
+1.	✅ Object-Oriented — Everything is treated as objects.
+2.	✅ Platform Independent — Java code is compiled into bytecode that runs on any OS with a JVM.
+3.	✅ Simple — Easy to learn and use.
+4.	✅ Secure — Provides security features like bytecode verification, sandboxing, etc.
+5.	✅ Robust — Strong memory management and exception handling.
+6.	✅ Portable — Java bytecode can be carried to any platform.
+7.	✅ Multithreaded — Supports multithreading for concurrent execution.
+8.	✅ High Performance — JVM optimizes bytecode execution.
+9.	✅ Distributed — Supports distributed computing using RMI and EJB.
+10.	✅ Dynamic — Loads classes dynamically at runtime.
+________________________________________
+Q4. What is JDK and its components?
+➡️ JDK stands for Java Development Kit.
+It is a complete software development kit required to develop, compile, and run Java applications.
+Components of JDK:
+1.	JRE (Java Runtime Environment): To run Java applications.
+2.	Compiler (javac): Converts Java code to bytecode.
+3.	Debugger (jdb): For debugging Java applications.
+4.	JavaDoc: Generates documentation from comments in the source code.
+5.	Tools and Libraries: Various development tools and APIs.
+6.	JVM (Java Virtual Machine): Runs the bytecode.
+________________________________________
+Q5. Is JVM platform-independent?
+➡️ No, JVM is not platform-independent — it is platform-dependent.
+•	Every operating system has its own JVM implementation.
+•	But once the Java code is compiled into bytecode, that bytecode is platform-independent.
+•	The JVM interprets the bytecode differently depending on the OS.
+
+
+1) If there is no main method, what will happen?
+➡️ The program will not run. The JVM (Java Virtual Machine) looks for the main method as the entry point. If it’s missing, you will get a runtime error:
+javascript
+CopyEdit
+Error: Main method not found in class ...
+________________________________________
+2) Does main method return any value?
+➡️ No, the main method has a return type of void, meaning it does not return any value.
+________________________________________
+3) What is main method?
+➡️ The main method is the entry point of any standalone Java application. JVM calls it to start program execution.
+Standard syntax:
+java
+CopyEdit
+public static void main(String[] args) { }
+________________________________________
+4) (String[] args) — what is this in main method?
+➡️ It's the command-line arguments passed to the program.
+•	String[] args: array of String type, storing command-line inputs when you run the program.
+•	For example, if you run:
+bash
+CopyEdit
+java Test Hello World
+then:
+java
+CopyEdit
+args[0] = "Hello";
+args[1] = "World";
+________________________________________
+5) Can I write something else instead of args, like (String[] Selenium)?
+➡️ Yes! The variable name can be anything, it's just a name for the parameter.
+Example:
+java
+CopyEdit
+public static void main(String[] Selenium) { }
+✅ This is valid, but by convention, we use args for clarity.
+________________________________________
+6) public static void main(string args[]) { } — is this correct? ([] position changed)
+➡️ Yes, the position of [] is fine in Java; both are correct:
+java
+CopyEdit
+String[] args; // common style
+String args[]; // also valid
+✅ But there’s a mistake: string should be String (Java is case-sensitive).
+It should be:
+java
+CopyEdit
+public static void main(String args[]) { }
+________________________________________
+7) public static void main(string[]args) { } — is this correct? (removed space between []args)
+➡️ ✅ Yes, it's fine to not have a space. But again, string should be String.
+Correct:
+java
+CopyEdit
+public static void main(String[] args) { }
+________________________________________
+8) public static void main(String...args) { } — is this correct? (replaced [] with ...)
+➡️ ✅ Yes, this is valid!
+String... args is called varargs in Java, and it works similarly to String[] args.
+JVM understands both.
+________________________________________
+9) static public void main(String[] args) { } — is this valid main method?
+➡️ ✅ Yes, the order of public static or static public doesn’t matter. Both are valid.
+________________________________________
+10) public void static main(String[] args) { } — is this valid main method?
+➡️ ❌ No, the order matters between void and static.
+Correct order is:
+java
+CopyEdit
+public static void main(String[] args) { }
+________________________________________
+11) public static main void (String[] args) { } — is this valid main method?
+➡️ ❌ No, this is invalid syntax. The return type should come before the method name, like:
+java
+CopyEdit
+public static void main(String[] args) { }
+________________________________________
+12) Who Gets Highest Priority in Execution?
+➡️ The main method gets the highest priority.
+When you run a Java program, JVM looks for the main method first to start execution.
+
+
+
+1) What is Source Code?
+•	Source code is the human-readable set of instructions written by a programmer in a programming language (like Java, Python, C++, etc.).
+•	Example:
+java
+CopyEdit
+public class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Hello, World!");
+    }
+}
+•	This is the code you write in your editor (like VSCode, IntelliJ, etc.) before it's compiled or interpreted.
+________________________________________
+2) What is Byte Code?
+•	Bytecode is an intermediate code generated after the source code is compiled.
+•	In Java, when you compile the .java file, it is converted into a .class file containing bytecode.
+•	Bytecode is platform-independent and is executed by the Java Virtual Machine (JVM).
+•	Example:
+The compiled HelloWorld.class file is bytecode.
+________________________________________
+3) What is Native Code?
+•	Native code is machine-level code specific to the system's processor architecture (like Intel x86, ARM, etc.).
+•	This is the final set of instructions that the hardware understands directly.
+•	It's generated from bytecode or source code by tools like compilers or JIT compilers.
+________________________________________
+4) What is Java Compiler?
+•	The Java compiler (javac) translates Java source code (.java file) into bytecode (.class file).
+•	It's the first step in running Java programs.
+•	The Java compiler ensures that your code is syntactically correct and follows language rules.
+________________________________________
+5) What is JIT Compiler?
+•	JIT stands for Just-In-Time Compiler.
+•	It's part of the JVM and converts bytecode into native machine code at runtime.
+•	The advantage is that it optimizes code during execution, making Java programs faster.
+•	It compiles "hot code paths" (frequently used parts of the code) into native code for better performance.
+________________________________________
+6) Difference between Compiler and Interpreter
+Feature	Compiler	Interpreter
+Definition	Translates the entire source code into machine code at once	Translates and executes the code line by line
+Execution Speed	Faster (since code is already compiled)	Slower (because it processes line by line)
+Error Detection	Detects all errors at compile time	Detects errors during execution
+Example Languages	C, C++, Java (compile to bytecode)	Python, JavaScript
+Output	Generates an independent executable file (like .exe) or bytecode	No independent file, it runs the code directly
+Usage in Java	Java uses both: Java Compiler (source → bytecode), JIT Compiler (bytecode → native code)	JVM also interprets bytecode before JIT compilation
+
+
+
+
