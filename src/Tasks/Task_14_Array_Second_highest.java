@@ -9,14 +9,26 @@ public class Task_14_Array_Second_highest {
         // logic
         // a0 is max?? > yes? > replace it with max > No replace it with second high
         // a1 is max?? >
+        // 1,2,3,4,5
         for(int i = 0 ; i < marks.length ; i++){
             if(marks[i] > max){
                     max = marks[i];
-                    System.out.println("1");
+             //       System.out.println("1");
             }
-            else{
-            second_hig = marks[i];
+//            else if(marks[i] > second_hig && marks[i]< max){
+//                second_hig = marks[i];
+//            }
+//            else {
+//               // System.out.println(marks[i]);
+//            }
+        }
+
+        for(int i = 0; i < marks.length; i++){
+            if(marks[i] > second_hig && marks[i] < max){
+
+                second_hig = marks[i];
             }
+
         }
             System.out.println("max is " + max);
             System.out.println("second hig is " + second_hig);
