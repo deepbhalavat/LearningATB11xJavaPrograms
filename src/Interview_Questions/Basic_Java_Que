@@ -165,3 +165,4 @@ Usage in Java	Java uses both: Java Compiler (source → bytecode), JIT Compiler 
 
 
 
+You Cannot use non static in  Static function

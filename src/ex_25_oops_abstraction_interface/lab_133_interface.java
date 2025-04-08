@@ -21,7 +21,3 @@ class Rectangle implements Polygon{
         System.out.println("Area of rectangle is " + (length * width));
     }
 }
-
-class Square implements Polygon{
-
-}
