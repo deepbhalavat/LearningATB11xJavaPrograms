@@ -17,11 +17,11 @@ public class lab091_User_Defined_functions {
         // With Parameters with return type
 
     }
-//1
+    //1 Without parameter without return type
     static void wp_wr_greet(){
         System.out.println("Hi, How are you");
     }
-    //2
+    //2 Without Parameters with return type
     static String St_with_hello_wp_withRT(){
         System.out.println("Hi");
         return "Hi, How are you?";
